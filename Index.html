@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Registradora</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="CSS/Style.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="products-cart-invoice-section">
+            <div class="products-section">
+                <h2>PRODUCTOS</h2>
+                <select id="product-list">
+                    <option value="" disabled selected>Selecciona un producto</option>
+                    <option data-price="4800" value="Leche" data-img="leche.png">Leche - $4.800</option>
+                    <option data-price="3200" value="Pan" data-img="pan.jpg">Pan - $3.200</option>
+                    <option data-price="4200" value="Arroz" data-img="arroz.jpg">Arroz - $4.200</option>
+                    <option data-price="14000" value="Huevos" data-img="huevos.jpg">Huevos - $14.000</option>
+                    <option data-price="5000" value="Azúcar" data-img="azucar.jpg">Azúcar - $5.000</option>
+                    <option data-price="17000" value="Aceite de cocina" data-img="aceite.webp">Aceite de cocina - $17.000</option>
+                    <option data-price="3800" value="Harina" data-img="harina.jpg">Harina - $3.800</option>
+                    <option data-price="2000" value="Sal" data-img="sal.webp">Sal - $2.000</option>
+                    <option data-price="4500" value="Jabón de lavar" data-img="jabon.jpg">Jabón de lavar - $4.500</option>
+                    <option data-price="3200" value="Lentejas" data-img="lentejas.jpg">Lentejas - $3.200</option>
+                    <option data-price="9500" value="Queso" data-img="queso.jpg">Queso - $9.500</option>
+                    <option data-price="14500" value="Café" data-img="cafe.jpg">Café - $14.500</option>
+                    <option data-price="30000" value="Vino" data-img="vino.jpg">Vino - $30.000</option>
+                    <option data-price="17000" value="Papel higiénico" data-img="papel.jpg">Papel higiénico - $17.000</option>
+                    <option data-price="6000" value="Atún enlatado" data-img="atun.jpg">Atún enlatado - $6.000</option>
+                    <option data-price="25000" value="Carne de res" data-img="res.jpg">Carne de res - $25.000</option>
+                    <option data-price="18000" value="Pollo" data-img="pollo.jpg">Pollo - $18.000</option>
+                    <option data-price="7200" value="Cereales" data-img="cereal.jpg">Cereales - $7.200</option>
+                    <option data-price="8000" value="Mantequilla" data-img="matequilla.jpg">Mantequilla - $8.000</option>
+                    <option data-price="5500" value="Yogur" data-img="yogur.jpg">Yogur - $5.500</option>              
+                </select>
+              
+                <div id="product-image-container">
+                    <img id="product-image" src="" alt="Imagen del producto" style="display: none;">
+                </div>
+
+                <button id="add-to-cart-btn">Añadir al Carrito</button>
+            </div>
+
+            <div class="cart-section">
+                <h2>CARRITO</h2>
+                <ul id="cart-items"></ul>
+                <button id="purchase-btn">Comprar</button>
+            </div>
+
+            <div class="invoice-section">
+                <h2>FACTURA</h2>
+                <ul id="invoice-items"></ul>
+                <p>Total: $<span id="total-price">0</span></p>
+                <button id="new-invoice-btn">Nueva Factura</button>
+            </div>
+        </section>
+
+        <div class="history-section">
+            <h2>HISTORIAL DE FACTURAS</h2>
+            <div id="invoice-history"></div>
+        </div>
+
+        <script src="JS/Main.js"></script>
+    </div>
+</body>
+</html>
+

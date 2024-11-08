@@ -1,0 +1,180 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    background-image: url("../IMG/fondo.avif");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0; 
+}
+
+/* Estructura principal */
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+/* Sección de productos, carrito y factura */
+.products-cart-invoice-section {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+/* Secciones de productos, carrito, factura e historial */
+.products-section, .cart-section, .invoice-section {
+    background-color: #ffffffcd;
+    border-radius: 15px;
+    padding: 20px;
+    width: calc(32% - 20px); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 2px;
+}
+
+/* Estilo para la sección de historial */
+.history-section {
+    background-color: #ffffffcd;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #007bff; 
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Lista de productos */
+#product-list {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: border-color 0.3s;
+}
+
+#product-list:hover {
+    border-color: #007bff; 
+}
+
+/* Estilos del carrito y de la factura */
+#cart-items, #invoice-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+
+#cart-items li, #invoice-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+#cart-items li:hover, #invoice-items li:hover {
+    background-color: #e0f7fa; 
+}
+
+/* Botones principales */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05); 
+}
+
+/* Imagen del producto */
+#product-image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#product-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #007bff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* Historial de facturas */
+.history-section {
+    overflow-y: auto;
+    max-height: 300px; 
+}
+
+.history-section h2 {
+    margin-bottom: 10px;
+}
+
+#invoice-history {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+#invoice-history p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+#total-price {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ff5722;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .products-section, .cart-section, .invoice-section {
+        width: calc(48% - 20px); 
+    }
+
+    .history-section {
+        width: 90%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .products-section, .cart-section, .invoice-section {
+        width: 100%;
+    }
+
+    .history-section {
+        width: 100%; 
+    }
+}
+
+
